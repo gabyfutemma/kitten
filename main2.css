@@ -1,0 +1,70 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: repeat(10, 60px);
+  grid-template-columns: repeat(10, 1fr);
+  width: 960px;
+}
+
+.background {
+  background-image: url('images/sunny-day.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 600px;
+  grid-row: 1/11;
+  grid-column: 1/11;
+}
+
+.kitten {
+  background-image: url('images/kitten-medium.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 245px;
+  grid-row: 5/9;
+  grid-column: 4 / span 5;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    display: grid;
+    grid-template-rows: repeat(10, 33.5px);
+    grid-template-columns: repeat(12, 1fr);
+    width: 595px;
+  }
+  .background {
+    background-image: url('images/night.jpg');
+    background-repeat: no-repeat;
+    height: 335px;
+    grid-row: 1/11;
+    grid-column: 1/13;
+  }
+  .kitten {
+    background-image: url('images/kitten-small.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-row: 6/11;
+    grid-column: 3/7;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-rows: repeat(10, 33.5px);
+    grid-template-columns: repeat(12, 1fr);
+    width: 600px;
+  }
+  .background {
+    background-image: url('images/dawn.png');
+    background-repeat: no-repeat;
+    height: 600px;
+    grid-row: 1/11;
+    grid-column: 1/13;
+  }
+  .kitten {
+    background-image: url('images/kitten-large.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-row: 6/11;
+    grid-column: 3/11;
+  }
+}
